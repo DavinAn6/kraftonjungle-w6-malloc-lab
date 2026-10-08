@@ -7,12 +7,13 @@ extern void *find_fit(size_t asize);
 extern void *firstFit(size_t asize);
 extern void *nextFit(size_t asize);
 extern void *bestFit(size_t asize);
-extern void place(void *bp, size_t asize);
+extern void *place(void *bp, size_t asize);
 extern void mm_free (void *ptr);
 extern void *coalesce(void *bp);
 extern void insertFreeList(void *bp);
 extern void *removeFreeList(void *bp);
 extern void *mm_realloc(void *ptr, size_t size);
+extern void *merge_next(void *bp);
 extern void print_heap();
 
 
